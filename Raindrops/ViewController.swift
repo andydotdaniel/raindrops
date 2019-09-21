@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         return view
     }()
     
-    private let instructionsLabel: UILabel = {
+    private var instructionsLabel: UILabel? = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Tap on the screen to start the raindrops."
@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     }
     
     private func setupInstructions() {
+        guard let instructionsLabel = self.instructionsLabel else { return }
         view.addSubview(instructionsLabel)
         
         instructionsLabel.sizeToFit()
@@ -69,6 +70,10 @@ class ViewController: UIViewController {
     }
     
     @objc private func onScreenTapped(gestureRecognizer: UITapGestureRecognizer) {
+        if let _ = self.instructionsLabel {
+            hideInstructionsLabel()
+        }
+        
         let tapPosition = gestureRecognizer.location(in: view)
         let raindrop = Raindrop(origin: tapPosition)
         view.addSubview(raindrop)
@@ -77,6 +82,14 @@ class ViewController: UIViewController {
         raindrop.animateRipple() { _ in
             raindrop.removeFromSuperview()
         }
+    }
+    
+    private func hideInstructionsLabel() {
+        UIView.animate(withDuration: 0.175, animations: {
+            self.instructionsLabel?.alpha = 0.0
+        }, completion: { _ in
+            self.instructionsLabel?.removeFromSuperview()
+        })
     }
 
 }
