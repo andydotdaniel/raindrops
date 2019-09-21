@@ -27,9 +27,9 @@ class Raindrop: UIView {
     }
     
     private func initialSetup() {
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 3
         layer.cornerRadius = frame.width / 2
+        layer.borderColor = UIColor.white.cgColor
         translatesAutoresizingMaskIntoConstraints = false
     }
     
