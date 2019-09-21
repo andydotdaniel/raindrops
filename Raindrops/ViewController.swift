@@ -21,7 +21,15 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    @objc private func onScreenTapped(gestureRecognizer: UITapGestureRecognizer) {}
+    @objc private func onScreenTapped(gestureRecognizer: UITapGestureRecognizer) {
+        let tapPosition = gestureRecognizer.location(in: view)
+        let raindrop = Raindrop(origin: tapPosition)
+        view.addSubview(raindrop)
+        
+        raindrop.animateRipple() { _ in
+            raindrop.removeFromSuperview()
+        }
+    }
 
 }
 
