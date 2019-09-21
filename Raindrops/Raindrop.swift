@@ -10,8 +10,14 @@ import UIKit
 
 class Raindrop: UIView {
     
-    init(origin: CGPoint, diameter: CGFloat) {
-        let frame = CGRect(x: origin.x, y: origin.y, width: diameter, height: diameter)
+    private let startingDiameter: CGFloat = 15
+    private let endingDiameter: CGFloat = 275
+    
+    init(origin: CGPoint) {
+        let originOffset: CGFloat = (startingDiameter / 2)
+        let centeredOrigin = CGPoint(x: origin.x - originOffset, y: origin.y - originOffset)
+        let frame = CGRect(x: centeredOrigin.x, y: centeredOrigin.y, width: startingDiameter, height: startingDiameter)
+        
         super.init(frame: frame)
         initialSetup()
     }
@@ -25,6 +31,21 @@ class Raindrop: UIView {
         layer.borderColor = UIColor.white.cgColor
         layer.cornerRadius = frame.width / 2
         translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    func animateRipple(completion: ((Bool) -> Void)?) {
+        UIView.animate(withDuration: 3.13, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.6, options: .curveEaseOut, animations: {
+            self.layer.borderWidth = 1
+            
+            let originOffset: CGFloat = self.endingDiameter / 2
+            self.layer.cornerRadius = originOffset
+            
+            let origin = self.frame.origin
+            self.frame.origin = CGPoint(x: origin.x - originOffset, y: origin.y - originOffset)
+            
+            self.frame.size = CGSize(width: self.endingDiameter, height: self.endingDiameter)
+            self.alpha = 0.0
+        }, completion: completion)
     }
     
 }
