@@ -16,6 +16,10 @@ class ViewController: UIViewController {
         return view
     }()
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 0.18, green: 0.16, blue: 0.17, alpha: 1.0)
