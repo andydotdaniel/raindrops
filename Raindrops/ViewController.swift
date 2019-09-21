@@ -16,6 +16,17 @@ class ViewController: UIViewController {
         return view
     }()
     
+    private let instructionsLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Tap on the screen to start the raindrops."
+        label.font = UIFont.boldSystemFont(ofSize: 17)
+        label.textColor = .white
+        label.numberOfLines = 0
+        label.textAlignment = NSTextAlignment(.center)
+        return label
+    }()
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -27,6 +38,26 @@ class ViewController: UIViewController {
     }
 
     private func initialSetup() {
+        setupInstructions()
+        setupTapView()
+    }
+    
+    private func setupInstructions() {
+        view.addSubview(instructionsLabel)
+        
+        instructionsLabel.sizeToFit()
+        instructionsLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        let views = ["label": instructionsLabel]
+        view.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-16-[label]-16-|",
+            options: [],
+            metrics: nil,
+            views: views)
+        )
+    }
+    
+    private func setupTapView() {
         view.addSubview(tapView)
         tapView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tapView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
