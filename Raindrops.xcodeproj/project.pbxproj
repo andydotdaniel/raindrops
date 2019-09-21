@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10D2F32523364DD20066C02A /* RaindropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2F32423364DD20066C02A /* RaindropsTests.swift */; };
 		10FEAB1023360E29002C4432 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FEAB0F23360E29002C4432 /* AppDelegate.swift */; };
 		10FEAB1223360E29002C4432 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FEAB1123360E29002C4432 /* ViewController.swift */; };
 		10FEAB1A23360E2A002C4432 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10FEAB1823360E2A002C4432 /* LaunchScreen.storyboard */; };
@@ -14,7 +15,20 @@
 		10FEAB24233632C2002C4432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10FEAB23233632C2002C4432 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		10D2F32723364DD20066C02A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10FEAB0423360E29002C4432 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10FEAB0B23360E29002C4432;
+			remoteInfo = Raindrops;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		10D2F32223364DD20066C02A /* RaindropsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaindropsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10D2F32423364DD20066C02A /* RaindropsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaindropsTests.swift; sourceTree = "<group>"; };
+		10D2F32623364DD20066C02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10FEAB0C23360E29002C4432 /* Raindrops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raindrops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10FEAB0F23360E29002C4432 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10FEAB1123360E29002C4432 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +39,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		10D2F31F23364DD20066C02A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		10FEAB0923360E29002C4432 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +56,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10D2F32323364DD20066C02A /* RaindropsTests */ = {
+			isa = PBXGroup;
+			children = (
+				10D2F32423364DD20066C02A /* RaindropsTests.swift */,
+				10D2F32623364DD20066C02A /* Info.plist */,
+			);
+			path = RaindropsTests;
+			sourceTree = "<group>";
+		};
 		10FEAB0323360E29002C4432 = {
 			isa = PBXGroup;
 			children = (
 				10FEAB0E23360E29002C4432 /* Raindrops */,
+				10D2F32323364DD20066C02A /* RaindropsTests */,
 				10FEAB0D23360E29002C4432 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				10FEAB0C23360E29002C4432 /* Raindrops.app */,
+				10D2F32223364DD20066C02A /* RaindropsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +99,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		10D2F32123364DD20066C02A /* RaindropsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10D2F32923364DD20066C02A /* Build configuration list for PBXNativeTarget "RaindropsTests" */;
+			buildPhases = (
+				10D2F31E23364DD20066C02A /* Sources */,
+				10D2F31F23364DD20066C02A /* Frameworks */,
+				10D2F32023364DD20066C02A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10D2F32823364DD20066C02A /* PBXTargetDependency */,
+			);
+			name = RaindropsTests;
+			productName = RaindropsTests;
+			productReference = 10D2F32223364DD20066C02A /* RaindropsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		10FEAB0B23360E29002C4432 /* Raindrops */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10FEAB1E23360E2A002C4432 /* Build configuration list for PBXNativeTarget "Raindrops" */;
@@ -94,6 +144,10 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Andrew Daniel";
 				TargetAttributes = {
+					10D2F32123364DD20066C02A = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 10FEAB0B23360E29002C4432;
+					};
 					10FEAB0B23360E29002C4432 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -113,11 +167,19 @@
 			projectRoot = "";
 			targets = (
 				10FEAB0B23360E29002C4432 /* Raindrops */,
+				10D2F32123364DD20066C02A /* RaindropsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		10D2F32023364DD20066C02A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		10FEAB0A23360E29002C4432 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,6 +192,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		10D2F31E23364DD20066C02A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10D2F32523364DD20066C02A /* RaindropsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		10FEAB0823360E29002C4432 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,6 +211,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10D2F32823364DD20066C02A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10FEAB0B23360E29002C4432 /* Raindrops */;
+			targetProxy = 10D2F32723364DD20066C02A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		10FEAB1823360E2A002C4432 /* LaunchScreen.storyboard */ = {
@@ -154,6 +232,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		10D2F32A23364DD20066C02A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A229E9TMUD;
+				INFOPLIST_FILE = RaindropsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andydotdaniel.RaindropsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Raindrops.app/Raindrops";
+			};
+			name = Debug;
+		};
+		10D2F32B23364DD20066C02A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A229E9TMUD;
+				INFOPLIST_FILE = RaindropsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andydotdaniel.RaindropsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Raindrops.app/Raindrops";
+			};
+			name = Release;
+		};
 		10FEAB1C23360E2A002C4432 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -309,6 +427,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		10D2F32923364DD20066C02A /* Build configuration list for PBXNativeTarget "RaindropsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10D2F32A23364DD20066C02A /* Debug */,
+				10D2F32B23364DD20066C02A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		10FEAB0723360E29002C4432 /* Build configuration list for PBXProject "Raindrops" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

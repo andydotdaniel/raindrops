@@ -10,13 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let tapView: UIView = {
+    let tapView: UIView = {
         let view = UIView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    private var instructionsLabel: UILabel? = {
+    var instructionsLabel: UILabel? = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Tap on the screen to start the raindrops."
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
         tapView.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    @objc private func onScreenTapped(gestureRecognizer: UITapGestureRecognizer) {
+    @objc func onScreenTapped(gestureRecognizer: UITapGestureRecognizer) {
         if let _ = self.instructionsLabel {
             hideInstructionsLabel()
         }
