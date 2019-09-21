@@ -54,9 +54,9 @@
 			children = (
 				10FEAB0F23360E29002C4432 /* AppDelegate.swift */,
 				10FEAB1123360E29002C4432 /* ViewController.swift */,
+				10FEAB212336169E002C4432 /* Raindrop.swift */,
 				10FEAB1823360E2A002C4432 /* LaunchScreen.storyboard */,
 				10FEAB1B23360E2A002C4432 /* Info.plist */,
-				10FEAB212336169E002C4432 /* Raindrop.swift */,
 			);
 			path = Raindrops;
 			sourceTree = "<group>";
