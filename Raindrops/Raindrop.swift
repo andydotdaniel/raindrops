@@ -11,7 +11,7 @@ import UIKit
 class Raindrop: UIView {
     
     private let startingDiameter: CGFloat = 15
-    private let endingDiameter: CGFloat = 275
+    private let endingDiameter: CGFloat = 325
     
     init(origin: CGPoint) {
         let originOffset: CGFloat = (startingDiameter / 2)
@@ -34,7 +34,7 @@ class Raindrop: UIView {
     }
     
     func animateRipple(completion: ((Bool) -> Void)?) {
-        UIView.animate(withDuration: 3.13, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.6, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 3.46, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.6, options: .curveEaseOut, animations: {
             self.layer.borderWidth = 1
             
             let originOffset: CGFloat = self.endingDiameter / 2
