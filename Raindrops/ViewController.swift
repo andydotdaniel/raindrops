@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         label.textColor = .white
         label.numberOfLines = 0
         label.textAlignment = NSTextAlignment(.center)
+        label.alpha = 0.0
         return label
     }()
     
@@ -40,6 +41,8 @@ class ViewController: UIViewController {
     private func initialSetup() {
         setupInstructions()
         setupTapView()
+        
+        showInstructions()
     }
     
     private func setupInstructions() {
@@ -56,6 +59,12 @@ class ViewController: UIViewController {
             metrics: nil,
             views: views)
         )
+    }
+    
+    private func showInstructions() {
+        UIView.animate(withDuration: 0.25, delay: 0.5, options: [], animations: {
+            self.instructionsLabel?.alpha = 1.0
+        }, completion: nil)
     }
     
     private func setupTapView() {
